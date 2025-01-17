@@ -65,7 +65,7 @@ const ConnectModal = () => {
                  text-white font-semibold px-6 py-2.5 text-sm transition-colors duration-200 
                  cursor-pointer shadow-sm hover:shadow-md'
       >
-        <span>Connect Wallet</span>
+        <span>Create Wallet</span>
       </label>
 
       {/* Modal Toggle */}
