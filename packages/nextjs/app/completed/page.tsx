@@ -57,8 +57,7 @@ const Complete = () => {
             </p>
           </div>
 
-          {/* Wallet Details */}
-          <div className='p-6 space-y-6'>
+          {/* <div className='p-6 space-y-6'>
             <div className='p-4 bg-gray-750 rounded-lg border border-gray-600'>
               <h3 className='text-sm font-medium text-gray-400 mb-2'>
                 Your Wallet Address
@@ -71,7 +70,6 @@ const Complete = () => {
               </div>
             </div>
 
-            {/* Recovery Info */}
             <div className='p-4 bg-gray-750 rounded-lg border border-gray-600'>
               <div className='flex items-start space-x-3'>
                 <CheckCircle className='w-6 h-6 text-green-400 mt-1' />
@@ -98,7 +96,7 @@ const Complete = () => {
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
 
           {/* Action Buttons */}
           <div className='p-6 border-t border-gray-700 bg-gray-750'>

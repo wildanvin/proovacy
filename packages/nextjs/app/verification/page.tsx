@@ -8,6 +8,7 @@ import {
   AlertCircle,
 } from 'lucide-react'
 import Link from 'next/link'
+import { Reclaim } from '../../components/Reclaim'
 
 type Platform = 'twitter' | 'telegram'
 
@@ -105,12 +106,15 @@ const Verification = () => {
               {connectedAccounts.twitter ? (
                 <CheckCircle className='w-6 h-6 text-green-400' />
               ) : (
-                <button
-                  onClick={() => handleConnect('twitter')}
-                  className='px-4 py-2 bg-blue-500 rounded-lg hover:bg-blue-600 transition-colors'
-                >
-                  Connect
-                </button>
+                <div>
+                  {/* <button
+                    onClick={() => handleConnect('twitter')}
+                    className='px-4 py-2 bg-blue-500 rounded-lg hover:bg-blue-600 transition-colors'
+                  >
+                    Connect
+                  </button> */}
+                  <Reclaim />
+                </div>
               )}
             </div>
 
