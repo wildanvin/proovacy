@@ -57,13 +57,13 @@ const ConnectModal = () => {
   }
 
   return (
-    <div>
+    <div className='px-6 py-2 bg-gradient-to-r from-purple-500 to-blue-500 rounded-lg hover:from-purple-600 hover:to-blue-600 transition-colors flex items-center space-x-2'>
       {/* Connect Button */}
       <label
         htmlFor='connect-modal'
-        className='inline-flex items-center justify-center rounded-xl bg-primary hover:bg-primary/90 
-                 text-white font-semibold px-6 py-2.5 text-sm transition-colors duration-200 
-                 cursor-pointer shadow-sm hover:shadow-md'
+        // className='inline-flex items-center justify-center rounded-xl bg-primary hover:bg-primary/90
+        //          text-white font-semibold px-6 py-2.5 text-sm transition-colors duration-200
+        //          cursor-pointer shadow-sm hover:shadow-md'
       >
         <span>Create Wallet</span>
       </label>
@@ -81,8 +81,9 @@ const ConnectModal = () => {
         <div className='bg-white dark:bg-gray-800 rounded-2xl shadow-xl w-full max-w-md'>
           {/* Modal Header */}
           <div className='flex items-center justify-between p-6 border-b border-gray-200 dark:border-gray-700'>
+            {/* <h3 className='text-xl font-bold text-gray-900 dark:text-white'> */}
             <h3 className='text-xl font-bold text-gray-900 dark:text-white'>
-              Connect a Wallet
+              Create your Wallet
             </h3>
             <button
               onClick={() => {
