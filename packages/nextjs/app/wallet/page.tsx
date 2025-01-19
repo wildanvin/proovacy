@@ -117,9 +117,9 @@ const WalletIntegration = () => {
                 <span>Generate Wallet</span>
                 <ArrowRight className='w-4 h-4' />
               </button> */}
-              <Link href={'/completed'} passHref>
-                <CustomConnectButton />
-              </Link>
+              {/* <Link href={'/completed'} passHref> */}
+              <CustomConnectButton />
+              {/* </Link> */}
             </div>
           </div>
         </div>
