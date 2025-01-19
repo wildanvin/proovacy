@@ -9,14 +9,6 @@ function ReclaimDemo() {
   const [proofs, setProofs] = useState<any>([])
 
   const getVerificationReq = async () => {
-    // Your credentials from the Reclaim Developer Portal
-    // Replace these with your actual credentials
-
-    // const APP_ID = '0x7B5C8b54686A7549a758e72aD00829248B97D64F'
-    // const APP_SECRET =
-    //   '0xb31a37c7e4d220916c28e2cd5518fe0eb25dcc6ffd73ea1a8f5ef46f10abb09b'
-    // const PROVIDER_ID = 'e6fe962d-8b4e-4ce5-abcc-3d21c88bd64a'
-
     const APP_ID = process.env.NEXT_PUBLIC_APP_ID || ''
     const APP_SECRET = process.env.NEXT_PUBLIC_APP_SECRET || ''
     const PROVIDER_ID = process.env.NEXT_PUBLIC_PROVIDER_ID || ''
