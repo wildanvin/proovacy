@@ -43,6 +43,10 @@ export const menuLinks: HeaderMenuLink[] = [
   //   label: 'Dashboard',
   //   href: '/dashboard',
   // },
+  {
+    label: 'Reclaim Demo',
+    href: '/reclaimDemo',
+  },
   // {
   //   label: 'Debug Contracts',
   //   href: '/debug',

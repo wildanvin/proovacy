@@ -3,6 +3,7 @@ import {
   Shield,
   CheckCircle,
   ArrowRight,
+  CircleX,
   Wallet,
   AlertCircle,
 } from 'lucide-react'
@@ -84,7 +85,8 @@ const WalletIntegration = () => {
                   <p className='text-sm text-gray-400'>@username</p>
                 </div>
               </div>
-              <CheckCircle className='w-6 h-6 text-green-400' />
+
+              <CircleX className='w-6 h-6 text-red-400' />
             </div>
 
             {/* Security Info */}
