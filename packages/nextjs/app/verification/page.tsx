@@ -1,4 +1,5 @@
-import React from 'react'
+'use client'
+import React, { useState } from 'react'
 import {
   Shield,
   CheckCircle,
@@ -6,8 +7,35 @@ import {
   Wallet,
   AlertCircle,
 } from 'lucide-react'
+import Link from 'next/link'
+
+type Platform = 'twitter' | 'telegram'
+
+type ConnectedAccounts = {
+  twitter: boolean
+  telegram: boolean
+}
 
 const Verification = () => {
+  const [connectedAccounts, setConnectedAccounts] = useState<ConnectedAccounts>(
+    {
+      twitter: false,
+      telegram: false,
+    }
+  )
+
+  const handleConnect = (platform: Platform) => {
+    setConnectedAccounts((prev) => ({
+      ...prev,
+      [platform]: true,
+    }))
+  }
+
+  // Changed to check if at least one account is connected
+  const isAnyConnected = Object.values(connectedAccounts).some(
+    (status) => status
+  )
+
   return (
     <div className='min-h-screen bg-gray-900 text-gray-200'>
       {/* Header */}
@@ -74,9 +102,16 @@ const Verification = () => {
                   </p>
                 </div>
               </div>
-              <button className='px-4 py-2 bg-blue-500 rounded-lg hover:bg-blue-600 transition-colors'>
-                Connect
-              </button>
+              {connectedAccounts.twitter ? (
+                <CheckCircle className='w-6 h-6 text-green-400' />
+              ) : (
+                <button
+                  onClick={() => handleConnect('twitter')}
+                  className='px-4 py-2 bg-blue-500 rounded-lg hover:bg-blue-600 transition-colors'
+                >
+                  Connect
+                </button>
+              )}
             </div>
 
             <div className='flex items-center justify-between p-4 bg-gray-750 rounded-lg border border-gray-600'>
@@ -91,9 +126,16 @@ const Verification = () => {
                   </p>
                 </div>
               </div>
-              <button className='px-4 py-2 bg-blue-400 rounded-lg hover:bg-blue-500 transition-colors'>
-                Connect
-              </button>
+              {connectedAccounts.telegram ? (
+                <CheckCircle className='w-6 h-6 text-green-400' />
+              ) : (
+                <button
+                  onClick={() => handleConnect('telegram')}
+                  className='px-4 py-2 bg-blue-400 rounded-lg hover:bg-blue-500 transition-colors'
+                >
+                  Connect
+                </button>
+              )}
             </div>
 
             {/* Requirements Info */}
@@ -103,9 +145,9 @@ const Verification = () => {
                 <div>
                   <h3 className='font-medium'>Verification Requirements</h3>
                   <p className='text-sm text-gray-400 mt-1'>
-                    You must verify at least two social accounts to proceed.
-                    This helps ensure account security and enables wallet
-                    recovery options.
+                    You must verify at least one social account to proceed. This
+                    helps ensure account security and enables wallet recovery
+                    options.
                   </p>
                 </div>
               </div>
@@ -119,10 +161,21 @@ const Verification = () => {
                 className='px-6 py-2 text-gray-400 hover:text-gray-200 transition-colors'
                 disabled
               >
-                Back
+                <Link href={'/'} passHref>
+                  Back
+                </Link>
               </button>
-              <button className='px-6 py-2 bg-gray-600 rounded-lg cursor-not-allowed flex items-center space-x-2'>
-                <span>Continue</span>
+              <button
+                className={`px-6 py-2 rounded-lg flex items-center space-x-2 transition-colors ${
+                  isAnyConnected
+                    ? 'bg-gradient-to-r from-purple-500 to-blue-500 hover:from-purple-600 hover:to-blue-600 cursor-pointer'
+                    : 'bg-gray-600 cursor-not-allowed'
+                }`}
+                disabled={!isAnyConnected}
+              >
+                <Link href={'/wallet'} passHref>
+                  Continue
+                </Link>
                 <ArrowRight className='w-4 h-4' />
               </button>
             </div>

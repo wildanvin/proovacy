@@ -6,6 +6,7 @@ import {
   Wallet,
   AlertCircle,
 } from 'lucide-react'
+import Link from 'next/link'
 import { CustomConnectButton } from '~~/components/scaffold-stark/CustomConnectButton'
 
 const WalletIntegration = () => {
@@ -106,13 +107,17 @@ const WalletIntegration = () => {
           <div className='p-6 border-t border-gray-700 bg-gray-750'>
             <div className='flex justify-between items-center'>
               <button className='px-6 py-2 text-gray-400 hover:text-gray-200 transition-colors'>
-                Back
+                <Link href={'/verification'} passHref>
+                  Back
+                </Link>
               </button>
               {/* <button className='px-6 py-2 bg-gradient-to-r from-purple-500 to-blue-500 rounded-lg hover:from-purple-600 hover:to-blue-600 transition-colors flex items-center space-x-2'>
                 <span>Generate Wallet</span>
                 <ArrowRight className='w-4 h-4' />
               </button> */}
-              <CustomConnectButton />
+              <Link href={'/completed'} passHref>
+                <CustomConnectButton />
+              </Link>
             </div>
           </div>
         </div>

@@ -1,5 +1,6 @@
 import React from 'react'
 import { Shield, Lock, Users } from 'lucide-react'
+import Link from 'next/link'
 
 const Home = () => {
   return (
@@ -32,7 +33,9 @@ const Home = () => {
               Connect your Twitter account securely using zkTLS proof generation
             </p>
             <button className='mt-6 px-6 py-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white rounded-lg hover:from-purple-600 hover:to-blue-600 transition-colors'>
-              Connect Twitter
+              <Link href={'/verification'} passHref>
+                Connect Twitter
+              </Link>
             </button>
           </div>
 
@@ -47,7 +50,9 @@ const Home = () => {
               Verify your Telegram identity privately with zero-knowledge proofs
             </p>
             <button className='mt-6 px-6 py-2 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-lg hover:from-blue-600 hover:to-purple-600 transition-colors'>
-              Connect Telegram
+              <Link href={'/verification'} passHref>
+                Connect Telegram
+              </Link>
             </button>
           </div>
         </div>

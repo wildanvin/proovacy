@@ -26,28 +26,28 @@ export const menuLinks: HeaderMenuLink[] = [
     href: '/',
   },
 
-  {
-    label: 'Verification',
-    href: '/verification',
-  },
-  {
-    label: 'Wallet',
-    href: '/wallet',
-  },
+  // {
+  //   label: 'Verification',
+  //   href: '/verification',
+  // },
+  // {
+  //   label: 'Wallet',
+  //   href: '/wallet',
+  // },
 
-  {
-    label: 'Completed',
-    href: '/completed',
-  },
-  {
-    label: 'Dashboard',
-    href: '/dashboard',
-  },
-  {
-    label: 'Debug Contracts',
-    href: '/debug',
-    icon: <BugAntIcon className='h-4 w-4' />,
-  },
+  // {
+  //   label: 'Completed',
+  //   href: '/completed',
+  // },
+  // {
+  //   label: 'Dashboard',
+  //   href: '/dashboard',
+  // },
+  // {
+  //   label: 'Debug Contracts',
+  //   href: '/debug',
+  //   icon: <BugAntIcon className='h-4 w-4' />,
+  // },
 ]
 
 export const HeaderMenuLinks = () => {

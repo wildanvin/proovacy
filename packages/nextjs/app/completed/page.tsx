@@ -1,5 +1,6 @@
 import React from 'react'
 import { Shield, CheckCircle, Wallet, Copy, ExternalLink } from 'lucide-react'
+import Link from 'next/link'
 
 const Complete = () => {
   return (
@@ -103,7 +104,9 @@ const Complete = () => {
           <div className='p-6 border-t border-gray-700 bg-gray-750'>
             <div className='flex justify-center space-x-4'>
               <button className='px-6 py-2 bg-gradient-to-r from-purple-500 to-blue-500 rounded-lg hover:from-purple-600 hover:to-blue-600 transition-colors flex items-center space-x-2'>
-                <span>View Dashboard</span>
+                <Link href={'/dashboard'} passHref>
+                  View Dashboard
+                </Link>
                 <ExternalLink className='w-4 h-4' />
               </button>
             </div>
