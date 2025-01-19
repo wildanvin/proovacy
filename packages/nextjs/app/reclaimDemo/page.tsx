@@ -2,8 +2,7 @@
 import { useState } from 'react'
 import QRCode from 'react-qr-code'
 import { ReclaimProofRequest } from '@reclaimprotocol/js-sdk'
-
-export const Reclaim = function Reclaim() {
+const Reclaim = () => {
   // State to store the verification request URL
   const [requestUrl, setRequestUrl] = useState('')
   const [proofs, setProofs] = useState<any>([])
