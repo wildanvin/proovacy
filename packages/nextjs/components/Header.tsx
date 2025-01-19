@@ -25,13 +25,23 @@ export const menuLinks: HeaderMenuLink[] = [
     label: 'Home',
     href: '/',
   },
+
   {
-    label: 'Dashboard',
-    href: '/dashboard',
+    label: 'Verification',
+    href: '/verification',
   },
   {
     label: 'Wallet',
     href: '/wallet',
+  },
+
+  {
+    label: 'Completed',
+    href: '/completed',
+  },
+  {
+    label: 'Dashboard',
+    href: '/dashboard',
   },
   {
     label: 'Debug Contracts',
